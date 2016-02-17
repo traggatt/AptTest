@@ -1,0 +1,23 @@
+plugins {
+  id 'net.ltgt.apt' version '0.5'
+}
+
+allprojects {
+  apply plugin: 'java'
+  apply plugin: 'eclipse'
+  apply plugin: 'net.ltgt.apt'
+
+  
+  sourceCompatibility = 1.8 
+  targetCompatibility = 1.8
+
+  repositories {
+    jcenter()
+  
+  }
+  
+  task wrapper(type: Wrapper) {
+    gradleVersion = '2.10'
+  }
+  
+}
